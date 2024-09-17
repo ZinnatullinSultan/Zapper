@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AM.software</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!--stylesheet-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/threejs.css">
+</head>
+
+<body>
+
+  <!--preloader start-->
+  <div class="preloader">
+    <img src="assets/images/hero-logo.png" width="400px" alt="image">
+  </div>
+  <!--preloader end-->
+
+  <!--header section start-->
+  <header class="header header-1">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" width="250px" alt="logo">
+          </a>
+        </div>
+        <div class="header__nav">
+          <ul class="header__nav-primary">
+            <li><a href="#intro">How it Works</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#preview">Preview</a></li>
+            <li><a href="#get-in-touch">Contact us</a></li>
+          </ul>
+          <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="header__bars">
+          <div class="header__bars-bar header__bars-bar-1"></div>
+          <div class="header__bars-bar header__bars-bar-2"></div>
+          <div class="header__bars-bar header__bars-bar-3"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--header section end-->
+
+  <!--hero section start-->
+  <section class="hero">
+    <div class="hero__wrapper">
+      <div class="container">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-6 order-2 order-lg-1 text-center">
+            <div class="second-heading color-black">Discover 3D.</div>
+            <div class="second-heading color-black">Upload and Order Widget.</div>
+            <div id="generate-form" class="mt-2">
+              <div>
+                <input type="text" class="form-control" id="generate-input" name="text-input" placeholder="Describe what you want...">
+              </div>
+              <div class="d-flex align-items-center text-light mt-2">
+              <!-- <div class="mx-3 popular-tags">Popular Tags: </div>
+                <div class="d-flex flex-row">
+                  <button type="button" class="btn btn-tag btn-sm m-2 fw-semibold">cylinder</button>
+                  <button type="button" class="btn btn-tag btn-sm m-2 fw-semibold">cylinder-tall</button>
+                  <button type="button" class="btn btn-tag btn-sm m-2 fw-semibold">cube</button>
+                  <button type="button" class="btn btn-tag btn-sm m-2 fw-semibold">iso</button>
+                </div>-->
+              </div>
+              <div id="generate-progress-parent" class="progress my-2">
+                <div id="generate-progress" class="progress-bar progress-bar-striped pink-progress" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div> 
+            <div class="download-buttons d-flex justify-content-center align-items-center mt-5">
+              <a id="generate-button" class="google-play">
+                <div class="generate-text">GENERATE</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div id="canvas-container">           
+              <canvas id="threejs-canvas"></canvas>
+              <img id="threejs-fallback" src="assets/images/hero.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--hero section end-->
+
+  <!--feature section start-->
+  <section class="feature" id="intro">
+    <div class="container">
+      <h2 class="section-heading color-black">3 Simple Steps </h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="feature__box feature__box--1">
+            <div class="icon icon-1">
+              <i class="fad fa-user-astronaut"></i>
+            </div>
+            <div class="feature__box__wrapper">
+              <div class="feature__box--content feature__box--content-1">
+                <h3>Get Started Easily</h3>
+                <p class="paragraph dark">Generates models based on your text descriptions or 3D model files.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature__box feature__box--2">
+            <div class="icon icon-2">
+              <i class="fad fa-lightbulb-on"></i>
+            </div>
+            <div class="feature__box__wrapper">
+              <div class="feature__box--content feature__box--content-2">
+                <h3>Get a Feel for the Product  </h3>
+                <p class="paragraph dark">3D uploader demonstrates parameterized models to experience the product.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature__box feature__box--4">
+            <div class="icon icon-4">
+              <i class="fad fa-rocket-launch"></i>
+            </div>
+            <div class="feature__box__wrapper">
+              <div class="feature__box--content feature__box--content-4">
+                <h3>Get Ready to Order</h3>
+                <p class="paragraph dark">Integrated calculator shows a price range. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--feature section end-->
+
+  <!--growth section start-->
+  <section class="growth" id="feature">
+    <div class="growth__wrapper">
+      <div class="container">
+        <h2 class="section-heading color-black">Discover advanced features</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="growth__box">
+              <div class="icon">
+                <i class="fad fa-user-astronaut"></i>
+              </div>
+              <div class="content">
+                <h3>Order Placement</h3>
+                <p class="paragraph dark">Auisque metus tortor ultricies ac ligula neced eleifend sodales felise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="growth__box">
+              <div class="icon">
+                <i class="fad fa-lightbulb-on"></i>
+              </div>
+              <div class="content">
+                <h3>Customization</h3>
+                <p class="paragraph dark">Kuisque metus tortor ultricies ac ligula neced eleifend sodales felise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="growth__box">
+              <div class="icon">
+                <i class="fad fa-solar-system"></i>
+              </div>
+              <div class="content">
+                <h3>3D Preview</h3>
+                <p class="paragraph dark">Nuisque metus tortor ultricies ac ligula neced eleifend sodales felise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="growth__box">
+              <div class="icon">
+                <i class="fad fa-backpack"></i>
+              </div>
+              <div class="content">
+                <h3>Fast Quoting and Self-Checkout</h3>
+                <p class="paragraph dark">Euisque metus tortor ultricies ac ligula neced eleifend sodales felise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="button__wrapper">
+            <a href="#get-in-touch" class="button">
+              <span>GET STARTED <i class="fad fa-long-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--growth section end-->
+
+
+  <!--video section start-->
+  <div class="video" id="video">
+    <div class="video__wrapper">
+      <div class="container">
+        <div class="video__play">
+          <button type="button" data-toggle="modal" data-target="#videoModal">
+            <i class="fad fa-play"></i>
+          </button>
+          <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-close">
+                  <button type="button" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <video controls width="100%" height="300px" src="assets/images/Cat-video.mov"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video__background">
+          <img src="assets/images/video-bg-1.png" alt="image" class="texture-1">
+          <img src="assets/images/video-img.png" alt="image" class="phone">
+          <img src="assets/images/cat-paw.png" class="cat-paw" alt="">
+          <img src="assets/images/video-bg-2.png" alt="image" class="texture-2">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--video section end-->
+
+  <!--screenshot section start-->
+  <section class="screenshot" id="preview">
+    <div class="screenshot__wrapper">
+      <div class="container">
+        <div class="screenshot__info">
+          <h2 class="section-heading color-black">Tailored For Your Website.</h2>
+          <div class="screenshot-nav">
+            <div class="screenshot-nav-prev"><i class="fad fa-long-arrow-left"></i></div>
+            <div class="screenshot-nav-next"><i class="fad fa-long-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-container screenshot-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide screenshot-slide">
+            <img src="assets/images/light.png" style="width: 100%; height: 290px;" alt="image">
+          </div>
+          <div class="swiper-slide screenshot-slide">
+            <img src="assets/images/dark.png" style="width: 100%; height: 290px;" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--screenshot section end-->
+
+  <!--client section start-->
+  <section class="clients-sec" id="feedback">
+    <div class="container">
+      <h2 class="section-heading color-black">From creators of AM.software.</h2>
+      <div class="testimonial__wrapper">
+        <div class="client client-01 active">
+          <div class="image">
+            <img src="assets/images/Paul.jpg" style="width: 200px; height: 198px; border-radius: 30px;" alt="image">
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__wrapper">
+              <p>“At AM Software, we prioritize making complex technical products simple and easy for our customers to understand”</p>
+              <h4>— Paul, Solution Architecture</h4>
+            </div>
+          </div>
+        </div>
+        <div class="client client-02">
+          <div class="image">
+            <img src="assets/images/Lily.jpg" style="width: 200px; height: 198px; border-radius: 30px;" alt="image">
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__wrapper">
+              <p>“It’s as simple as magic. Our algorithm will generate a 3D model based on your request and calculate a preliminary cost estimate for your order. This makes getting started easy and convenient.”</p>
+              <h4>— Lily, Operations</h4>
+            </div>
+          </div>
+        </div>
+        <div class="client client-03">
+          <div class="image">
+            <img src="assets/images/Elena.jpg" style="width: 200px; height: 198px; border-radius: 30px;" alt="image">
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__wrapper">
+              <p>“Our in-depth experience in the 3D printing industry allows us to provide solutions that meet the unique needs of businesses. AM.software advanced technology helps businesses reach their full potential.”</p>
+              <h4>— Elena, Customer Development</h4>
+            </div>
+          </div>
+        </div>
+        <div class="client client-04">
+          <div class="image">
+            <img src="assets/images/Kate.jpg" style="width: 200px; height: 198px; border-radius: 30px;" alt="image">
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__wrapper">
+              <p>“Unlock your business potential with our game-changing products. Contact us now .”</p>
+              <h4>— Kate, Marketing</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="button__wrapper">
+          <a href="https://am.software" class="button" >
+            <span>AM Software Product <i class="fad fa-long-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="clients">
+        <div class="clients__info">
+          <h3>47,000+</h3>
+          <p class="paragraph dark">Customers in over 90 countries are growing their businesses with us.</p>
+        </div>
+        <div class="swiper-container clients-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide clients-slide">
+              <a href="#"><img src="assets/images/client-img.png" alt="image"></a>
+            </div>
+            <div class="swiper-slide clients-slide">
+              <a href="#"><img src="assets/images/client-img.png" alt="image"></a>
+            </div>
+            <div class="swiper-slide clients-slide">
+              <a href="#"><img src="assets/images/client-img.png" alt="image"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--client section end-->
+
+  <!--newsletter section start-->
+  <section class="newsletter newsletter-2" id="get-in-touch">
+    <div class="newsletter__wrapper">
+      <div class="container">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-8">
+            <div class="newsletter__info">
+              <h2 class="section-heading color-black">Get in touch with us today.</h2>
+              <div class="comment_form">
+                <div>
+                  <input type="text" placeholder="Name *" class="input-field">
+                  <input type="text" placeholder="Email *" class="input-field">
+                  <input type="text" placeholder="Website" class="input-field">
+                </div>
+                <div>
+                  <textarea placeholder="Write message" class="input-field"></textarea>
+                  <button class="button"><span>SEND <i class="fad fa-long-arrow-right"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="newsletter__img">
+              <img src="assets/images/newsletter-img.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--newsletter section end-->
+
+  <!--footer start-->
+  <!-- <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer__info">
+              <div class="footer__info--logo">
+                <img src="assets/images/footer-logo.png" alt="image">
+              </div>
+              <div class="footer__info--content">
+                <p class="paragraph dark">Zapper is an app that helps you
+                  organize yourself on the daily basis
+                  using systematic algorithms to
+                  achieve success.</p>
+                <div class="social">
+                  <ul>
+                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="footer__content-wrapper">
+              <div class="footer__list">
+                <ul>
+                  <li>Explore</li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">How It Works</a></li>
+                </ul>
+              </div>
+              <div class="footer__list">
+                <ul>
+                  <li>Help</li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+              <div class="download-buttons">
+                <h5>Download</h5>
+                <a href="#" class="google-play">
+                  <i class="fab fa-google-play"></i>
+                  <div class="button-content">
+                    <h6>GET IT ON <span>Google Play</span></h6>
+                  </div>
+                </a>
+                <a href="#" class="apple-store">
+                  <i class="fab fa-apple"></i>
+                  <div class="button-content">
+                    <h6>GET IT ON <span>Apple Store</span></h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="footer__copy">
+            <h6>&copy; GFXPARTNER</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+  <!--footer end-->
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/popper-1.16.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    $(window).on('load', function () {
+      $("body").addClass("loaded");
+    });
+  </script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- <script src="assets/js/ytdefer.min.js"></script> -->
+  <script src="assets/js/script.js"></script>
+  <script defer="" type="module" src="assets/js/three.js"></script>
+
+</body>
+
+</html>
